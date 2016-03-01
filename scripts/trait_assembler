@@ -6,12 +6,14 @@ import sys
 
 tasks = {
     'checkspreadsheet': 'Checks the input spreadsheet is valid',
+    'checkdependancies': 'Checks the correct versions of dependancies are installed',
     'version': 'Print version and exit',
 }
 
 
 ordered_tasks = [
     'checkspreadsheet',
+    'checkdependancies',
     'version'
 ]
 
