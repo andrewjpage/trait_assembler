@@ -1,6 +1,7 @@
 __all__ = [
     'common',
-    'input_spreadsheet'
+    'checkspreadsheet',
+    'program'
 ]
 
 from trait_assembler import *

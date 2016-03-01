@@ -1,6 +1,6 @@
 import sys
 import subprocess
-# From circlator
+# From circlator v0.14.2 by Martin Hunt
 
 version = '0.0.1'
 

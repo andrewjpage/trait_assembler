@@ -1,0 +1,2 @@
+trait_assembler/tests/data/checkspreadsheet/forward.fastq.gz,trait_assembler/tests/data/checkspreadsheet/reverse.fastq.gz,1
+trait_assembler/tests/data/checkspreadsheet/forward2.fastq.gz,,0

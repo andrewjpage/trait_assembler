@@ -1,30 +1,44 @@
 import os
 import csv
-from trait_assembler import common
 
 class SampleData:
     def __init__(self,row):
         
         if row[0]:
-            self.forward = os.path.abspath(row[0])
+            self.forward = os.path.abspath(row[0].strip())
         else:
-            self.forward = row[0]
+            self.forward = row[0].strip()
         
         if row[1]:
-            self.reverse = os.path.abspath(row[1])
+            self.reverse = os.path.abspath(row[1].strip())
         else:
-            self.reverse = row[1]
+            self.reverse = row[1].strip()
         
         if not row[2] == '':
-            self.trait = int(row[2])
+            self.trait = int(row[2].strip())
         else:
-            self.trait = row[2]
+            self.trait = row[2].strip()
     
 
-class InputSpreadsheet:
+class CheckSpreadsheet:
     def __init__(self,filename, delimiter = ','):
         self.filename = os.path.abspath(filename)
         self.delimiter = delimiter
+        self.metadata_for_samples =[]
+        
+    def parse_sample_data(self):
+        
+        if  self.is_valid_file() == False:
+            return self.metadata_for_samples
+            
+        with open(self.filename) as csvfile:
+            spreadsheetreader = csv.reader(csvfile, delimiter = self.delimiter)
+            for row in spreadsheetreader:
+                sd = SampleData(row)
+                self.metadata_for_samples.append(sd)
+                
+        return self.metadata_for_samples
+        
     
     def is_valid_file(self):
         # does the file exist?
