@@ -15,7 +15,7 @@ setup(
     url='https://github.com/sanger-pathogens/trait_assembler',
     scripts=glob.glob('scripts/*'),
     test_suite='nose.collector',
-    tests_require=['nose >= 1.3'],
+    tests_require=['nose >= 1.3', 'behave >= 1.2.5', 'pyhamcrest >= 1.8.5'],
     license='GPLv3',
     classifiers=[
         'Development Status :: 4 - Beta',

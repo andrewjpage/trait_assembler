@@ -3,6 +3,7 @@
 import argparse
 import sys
 # From circlator v0.14.2 by Martin Hunt
+sys.path.append('../')
 
 tasks = {
     'checkspreadsheet': 'Checks the input spreadsheet is valid',
