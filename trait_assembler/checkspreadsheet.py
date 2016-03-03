@@ -49,6 +49,7 @@ class CheckSpreadsheet:
         # read in the spreadsheet
         with open(self.filename) as csvfile:
             spreadsheetreader = csv.reader(csvfile, delimiter = self.delimiter)
+            
             for row in spreadsheetreader:
                 # there needs to be 3 columns
                 if len(row) != 3 or not row[0]:
