@@ -7,6 +7,7 @@ sys.path.append('../')
 sys.path.append('./')
 
 tasks = {
+    'samplekmers': 'Create a KMC database for each sample in a spreadsheet',
     'checkspreadsheet': 'Checks the input spreadsheet is valid',
     'checkdependancies': 'Checks the correct versions of dependancies are installed',
     'version': 'Print version and exit',
@@ -14,6 +15,7 @@ tasks = {
 
 
 ordered_tasks = [
+    'samplekmers',
     'checkspreadsheet',
     'checkdependancies',
     'version'

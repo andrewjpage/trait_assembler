@@ -1,5 +1,7 @@
 __all__ = [
+    'samplekmers',
     'checkspreadsheet',
+    'checkdependancies',
     'version',
 ]
 
